@@ -24,4 +24,9 @@ Q. add express.static() as middleware
 2. Add css in public and check whether accessible or not.
 
 
-app.use(express.static(__dirname + '/home')))
+app.use(express.json())
+app.use(express.urlencoded({ extended:false }))
+
+app.use(express.static(__dirname + '/contact  ')))
+
+app.get('/', (req, res) => {})
