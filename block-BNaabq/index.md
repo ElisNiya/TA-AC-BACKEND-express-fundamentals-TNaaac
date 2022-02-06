@@ -9,6 +9,11 @@ For example:-
 
 ```js
 res.cookie("username", "suraj");
+
+аpp.use((req,res,next) => {
+  res.cookie('count', 1)
+  next()
+})
 ```
 
 2. Fetch all cookies from request in next middleware.
