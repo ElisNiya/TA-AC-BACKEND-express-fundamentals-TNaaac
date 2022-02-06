@@ -11,4 +11,8 @@ var app = express()
 
 app.use('/about', (req, res, next) => { next() })
 
+app.get('/', (req, res) => {
+  res.send('welcome')
+})
+
 app.listen(3000, () => {})
