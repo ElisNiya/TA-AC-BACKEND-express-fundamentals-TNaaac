@@ -6,3 +6,19 @@ Q. Create another application named `sample2` and create a `package.json` using 
 
 
 npm init
+
+demo ls
+demo mkdir sample
+demo cd sample
+sample ls
+sample touch package.json.  - to create
+
+{
+"name": "sample2"
+}
+
+sample cd...
+demo mkdir sample2
+demo cd sample2
+sample2 npm init -y
+
