@@ -13,6 +13,8 @@ Q. Create a package.json with using npm init script with above content
 
 Q. Create a basic express server with 2 routes
 
+
+
 - add package.json
 - install express
 - setup an express server
@@ -20,6 +22,19 @@ Q. Create a basic express server with 2 routes
 - handle these routes
   1. GET -> `/` with HTML response saying 'Welcome to express' in H2.
   2. GET -> `/about` with plain text content saying 'My name is qwerty'
+
+
+var express = require('express')
+var app = express()
+
+app.get('/', (req,res) => {
+  res.send('hi')
+})
+app.get('/about', (req,res) => {
+ res.send('info')
+})
+
+app.listen(3000, () => {})
 
 Q. Modify above application, add appropriate middleware
 
