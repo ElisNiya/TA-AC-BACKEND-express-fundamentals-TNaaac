@@ -2,6 +2,19 @@ writeCode
 
 Q. Create a scaffold express application from the scratch with necessary middlewares and routes
 
+var express = require('express')
+
+var app = express()
+app.use(express.json())
+app.use(express.static)
+
+app.use('/', (req,res) => {
+  
+})
+
+app.use('/users', (req,res) => {
+  
+})
 - add package.json
 - install express and create an express server listening on port 4000
 - add middlewares for capturing form/json data
