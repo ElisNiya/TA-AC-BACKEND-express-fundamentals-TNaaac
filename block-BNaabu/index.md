@@ -13,6 +13,9 @@ Create a basic server using express and handle 2 routes
 ```js
 // middleware which throws err
 
+var express = require('express')
+var app = express()
+
 app.get('/', (req,res) => {
   res.send('hi')
 })
