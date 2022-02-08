@@ -1,20 +1,47 @@
 writeCode
 
 Q. Create a scaffold express application from the scratch with necessary middlewares and routes
+touch server.js
+npm i morgan cookie-parser
+
 
 var express = require('express')
+var logger = require('morgan')
+var cookieParser = require('cookie-parser')
 
 var app = express()
 app.use(express.json())
-app.use(express.static)
+app.use(express.urlencoded({extended:false}))
+app.use(express.static(__dirname +'/public'))
 
-app.use('/', (req,res) => {
-  
+app.use(logger('dev'))
+app.use(cookieParser())
+
+app.get('/', (req,res) => {
+  res.send('__dirname + '/index.html')
+})
+app.get('/projects', (req,res) => {
+  res.send('__dirname + '/projects.html')
 })
 
-app.use('/users', (req,res) => {
-  
+
+app.get('/users', (req,res) => {
+  res.send(Users Page')
 })
+app.use((req,res, next) => {
+  res.send('Page not found')
+})
+
+//custom client/server error
+
+app.use((err, req, res, next) => {
+  res.send(err)
+})
+app.listen(4000, () => {})
+
+
+
+
 - add package.json
 - install express and create an express server listening on port 4000
 - add middlewares for capturing form/json data
