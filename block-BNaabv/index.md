@@ -6,8 +6,23 @@ Q. Create a package.json file manually with
 - description
 - version
 
+{
+'name':'sample'
+'description': 'Express'
+'version':'1.1'
+}
+
 Q. Create a package.json with using npm init script with above content
 
+cd sample
+touch package.json
+rm package.json
+npm init -y
+
+in package.json-
+'dependencies': {'^express':'4.16.4'}
+
+npm i
 - add express package with exact version of 4.16.4
 - upgrade it to the latest version
 
